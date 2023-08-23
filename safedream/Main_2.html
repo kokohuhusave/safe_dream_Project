@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Main_edit.css">
+    <script src="./update.js"></script>
+    <title>지켜Dream</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img id="logo_img" src="./images/logo.png" alt="logo">
+        </div>
+        <div id="hamburger" onclick="toggleMenu()">
+        </div>
+        <div id="home" onclick="location.href='./Main_1.html'">
+        </div>
+    </header>
+    <section>
+        <div class="sidebar">
+            <ul>
+                <li id="userimg"><img src="./images/사람모양_배너.png" alt="" width="100" height="100"></li>
+                <li><a href="./update_user_edit.html">개인정보수정</a></li>
+                <hr>
+                <li><a href="#">사용자 및 운영자 교육</a></li>
+                <li class="small_letter"><a href="./edu.html" class="sub">아동안전지킴이</a></li>
+                <li class="small_letter"><a href="./edu2.html" class="sub">여성안전지킴이</a></li>
+                <hr>
+                <li><a href="./board_user.html">게시판</a></li>
+                <hr>
+                <li><a href="#">관련사이트</a></li>
+                <li class="small_letter"><a href="./patrol.html" class="sub">순찰지역 등록</a></li>
+                <li class="small_letter"><a href="./safety.html" class="sub">안전 귀가 신청</a></li>
+                <hr>
+                <li><a href="./index.html" onclick="clearToken()">로그아웃</a></li>
+            </ul>
+        </div> 
+
+        <div id="board">
+            <div class="selectmenu2 selected" onclick="location.href='./Main_2.html'">긴급신고 대기</div>
+            <div class="selectmenu2" onclick="location.href='./search.html'">지킴이집 검색</div>
+        </div>
+        <div class="singo_btn" id="tel"><img src="./images/callphone.png" alt=""><p> 신고하기 (전화)</p></div>
+        <div class="singo_btn" id="sms"><img src="./images/letter.png" alt=""><p>신고하기 (문자)</p></div>
+        <div id="start_btn" onclick="getGuardianHp()">시작</div>
+        <div id="siren_btn" onclick="playMusic()"><img src="./images/siren.png">사이렌</div>
+</section>
+</body>
+</html>

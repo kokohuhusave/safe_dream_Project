@@ -1,0 +1,292 @@
+:root {
+    --color-background: #18224E;
+    --color-nav-selected: rgb(70, 84, 128);
+    --color-board-back: #F4F4F4;
+    --color-login-back: #9999aec7;
+    --color-btn-darknavy:#434874;
+    --color-btn-navy:#505694;
+    --color-btn-lightnavy: #656BA2;
+    --color-btn-blue: #5A6CA8;
+    --color-btn-noact: #9999AE;
+    --color-btn-act: #656FC8;
+    --color-btn-yello: #FFCC4D;
+    --color-btn-red: #FF3131;
+    --font-subtitle: 18px;
+    --size-border-radius: 13px;
+    --color-box-back: #9999ae;
+}
+
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+ * {font-family: 'twayair';}
+
+ /****** 로그인 ******/
+
+html.backimg{
+    background-image: url(../images/background.png);
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+h3 {
+    margin: 10px auto;
+}
+#signup_title {
+    margin: 5px auto;
+}
+body {
+    /* backimage때문에 주석처리 */
+    /* background-color: #18224E; */
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+p {color:#000}
+p.text {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+
+a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+
+/************/
+
+/****** update.css ******/
+/*p태그중 내용들은 검정색 (update에 쓰임)*/
+p.up_text{
+    text-align: left;
+    color: black;
+    font: 18px bold;
+}
+/*인풋 박스 동그라미*/
+.input {
+    padding-left: 10px;
+    width: 94%;
+    height: 30px;
+    border: none;
+    border-radius: 13px;
+}
+.content {
+    /* overflow: ; */
+    height: 88%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+}
+div.nav{
+    width: 85%;
+    background-color: var(--color-login-back);
+    padding: 3% 20px;
+    border-radius: 13px;
+    z-index: 1;
+    height: 97%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    overflow: hidden;
+}
+
+/* 회원가입에서 중복버튼 css*/
+#btn_check{
+    height: 20px;
+    margin: 8px auto;
+    margin-bottom: 0;
+    background-color: var(--color-btn-darknavy);
+    border-radius: 15px;
+}
+#btn_submit {
+    height: 20px;
+    margin: 8px auto;
+    background-color: var(--color-background);
+    border-radius: 15px;
+}
+div.btn_update{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn{
+    color: white;
+    background-color: var(--color-background);
+    border: none;
+    border-radius: 13px;
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+}
+
+#del_btn{    
+    color: white;
+    float: right;
+    border: none;
+}
+
+.alt_btn{
+    color: black;
+    height: 40px;
+    width: 70px;
+    background-color: yellow;
+    border: none;
+    border-radius: 13px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+/************/
+#header {
+    background-color: #18224E;
+    box-sizing: border-box;
+    position: fixed; 
+    text-align: left;
+    top: 0;
+    width: 100%;
+    height: 18vh;
+    padding: 5px;
+    z-index: 1; 
+    color: black;
+    float: left;
+}
+
+#header>div {
+    box-sizing: border-box;
+    height: 48px;
+}
+
+#logo {
+    width: 30%;
+    height: 80%;
+    float: left;
+    margin: 5px 10px;
+}
+#imgbox{
+    flex-grow: 0.1;
+    width: 250px;
+    height: 20%;
+    float: left;
+    box-sizing: border-box;
+    margin: 5px auto;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#imgbox_signup {
+    flex-grow: 0.1;
+    width: 250px;
+    height: 20%;
+    box-sizing: border-box;
+    margin: 5px auto;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+img {
+    margin-top: 10px;
+    width: 80%;
+    max-width: 300px;
+}
+
+#hamburger {
+    width: 15%;
+    height: 80%;
+    float: right;
+    margin: 5px;
+}
+
+#home {
+    width: 15%;
+    height: 80%;
+    float: right;
+    margin: 5px;
+}
+
+#title {
+    background-color: #434874;
+    height: 50px;
+}
+
+
+ /****** ID / PW 찾기  ******/
+
+
+.noticeBoxID {
+    border: 1px solid white;
+    width: 50%;
+    background-color: var(--color-box-back);
+    padding: 30px;
+    color: white;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 18%;
+    z-index: auto;
+}
+.noticeBoxPW {
+    border: none;
+    width: 50%;
+    background-color: var(--color-login-back);
+    padding: 30px;
+    color: white;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 18%;
+    z-index: auto;
+}
+
+.noticeBoxPWA {
+    border: none;
+    width: 70%;
+    background-color: var(--color-login-back);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    z-index: auto;
+}
+
+.code_btn{
+    color: white;
+    background-color: var(--color-background);
+    border: none;
+    border-radius: 13px;
+    padding: 5px;
+    margin: 10px;
+    float: right;
+    height: 30px;
+    width: 110px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/update_edit.css">
+    <script src="./update.js"></script>
+    <script src="./update_user_edit.js"></script>
+    <!-- <script src="./regist.js"></script> -->
+    <title>지켜Dream</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img id="logo_img" src="./images/logo.png" alt="logo">
+        </div>
+        <div id="hamburger" onclick="toggleMenu()">
+        </div>
+        <div id="home" onclick="location.href='./Main_1.html'">
+        </div>
+    </header>
+    <section>
+        <div class="sidebar">
+            <ul>
+                <li id="userimg"><img src="./images/사람모양_배너.png" alt="" width="100" height="100"></li>
+                <li><a href="./update_user_edit.html">개인정보수정</a></li>
+                <hr>
+                <li><a href="#">사용자 및 운영자 교육</a></li>
+                <li class="small_letter"><a href="./edu.html" class="sub">아동안전지킴이</a></li>
+                <li class="small_letter"><a href="./edu2.html" class="sub">여성안전지킴이</a></li>
+                <hr>
+                <li><a href="./board_user.html">게시판</a></li>
+                <hr>
+                <li><a href="#">관련사이트</a></li>
+                <li class="small_letter"><a href="./patrol.html" class="sub">순찰지역 등록</a></li>
+                <li class="small_letter"><a href="./safety.html" class="sub">안전 귀가 신청</a></li>
+                <hr>
+                <li><a href="./index.html" onclick="clearToken()">로그아웃</a></li>
+            </ul>
+        </div>   
+
+        <div id="board">개인정보 수정</div>
+        <div class="nav">
+            <p class="up_text">이름</p>
+            <input type="text" id="username" class="input" maxlength="20" placeholder="이름을 입력하세요.">
+            <p class="up_text">비밀번호</p>
+            <input type="password" id="userpw" class="input" maxlength="20" placeholder="비밀번호를 입력하세요." style="font-family:none !important">
+            <p class="up_text">비밀번호 확인</p>
+            <input type="password" id="userpw_a" class="input" maxlength="20" placeholder="비밀번호를 입력하세요." style="font-family:none !important">
+            <p class="up_text">휴대폰 번호(본인)</p>
+            <input type="text" id="hp" class="input" maxlength="20" placeholder="번호를 입력하세요.">
+            <p class="up_text">보호자 연락처1[필수]</p>
+            <input type="text" id="guardianHp" class="input" maxlength="20" placeholder="보호자 연락처1를 입력하세요.">
+            <!-- <p class="up_text">보호자 연락처2</p>
+            <input type="text" id="protector2" class="input" maxlength="20" placeholder="보호자 연락처2를 입력하세요."> -->
+            <div id="btns_bottom">
+                <div type="button" class="btn" id="btn_bottom1" >작성 취소</div>
+                <div type="button" class="btn" id="btn_bottom2" onclick="handleUpdate()">변경 완료</div>
+            </div>
+            <div type="button" id="del_btn" onclick="delToggle()"><img src="./images/ouptdoor.png" alt=""width="25" height="25"> <p>회원 탈퇴</p></div>
+            <div class="noticeBox">
+                <p id="notice_P">정말 탈퇴 하시겠습니까?</p>
+                <div type="button" class="alt_btn" onclick="userDelete()" >네</div><div type="button" class="alt_btn" onclick="delToggle()">아니요</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

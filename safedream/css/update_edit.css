@@ -1,0 +1,287 @@
+:root {
+    --color-background: #18224E;
+    --color-nav-selected: rgb(70, 84, 128);
+    --color-board-back: #F4F4F4;
+    --color-login-back: #9999aec7;
+    --color-btn-darknavy:#434874;
+    --color-btn-navy:#505694;
+    --color-btn-lightnavy: #656BA2;
+    --color-btn-blue: #5A6CA8;
+    --color-btn-noact: #9999AE;
+    --color-btn-act: #656FC8;
+    --color-btn-yello: #FFCC4D;
+    --color-btn-red: #FF3131;
+    --font-subtitle: 18px;
+    --size-border-radius: 13px;
+}
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    padding: 0;
+    height: 100%;
+    background-color: #18224E;
+}
+body {
+    height: 100%;
+    color: white;
+    text-align: center;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    font-family: 'twayair';
+
+}
+/* header 부분 */
+header {
+    height: 10%;
+    box-sizing: border-box;
+    padding-top: 28px;
+}
+
+#logo {
+    width: 40%;
+    height: 60%;
+    float: left;
+    box-sizing: border-box;
+    margin: 5px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo_img {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    width: 120%;
+    max-width: 300px;
+    display: block;
+}
+
+#hamburger {
+    width: 14%;
+    height: 85%;
+    float: right;
+    margin-right: 0;
+    box-sizing: border-box;
+    margin: 0px;
+    background-image: url(../images/hamberger.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#home {
+    width: 14%;
+    height: 85%;
+    float: right;
+    margin-right: 15px;
+    box-sizing: border-box;
+    margin: 0px;
+    background-image: url(../images/home.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+/* section 부분 */
+section {
+    position: relative;
+    padding-top: 10px;
+    height: 90%;
+    box-sizing: border-box;
+    flex-direction: column;
+    overflow: hidden;
+    display: flex;
+    
+}
+#board{
+    height: 33px;
+    line-height: 33px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid white;
+    font-size: large;
+    clear: both;
+    font-weight: bolder;
+}
+
+
+/*p태그중 내용들은 검정색 (update에 쓰임)*/
+p.up_text{
+    text-align: left;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#notice_P{color: #000;}
+
+/*인풋 박스 동그라미*/
+.input {
+    padding-left: 10px;
+    width: 94%;
+    height: 29px;
+    border: none;
+    border-radius: 13px;
+    font-size: small;
+    font-family: 'twayair';
+    margin-bottom: 15px;
+}
+.nav{
+    width: 85%;
+    background-color: var(--color-login-back);
+    padding: 3% 20px;
+    border-radius: 13px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    overflow: hidden;
+    margin: auto;
+    height: 85%;
+}
+div.btn_update{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+#btns_bottom {
+    display: flex;
+    margin-bottom: 15px;
+}
+#btn_bottom1, #btn_bottom2 {
+    color: white;
+    background-color: var(--color-btn-darknavy);
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+    width: 120px;
+    height: 25px;
+    line-height: 25px;
+}
+
+#del_btn{
+    color: white;
+    float: right;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: small;
+}
+#del_btn >img{
+    width: 18px;
+    height: 18px;
+}
+#del_btn >p{
+    margin: 0;
+    margin-left: 6px;
+    line-height: 18px;
+}
+
+
+.noticeBox {
+    border: 3px solid red;
+    width: 50%;
+    height: auto;
+    background-color: white;
+    padding: 30px;
+    color: white;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 18%;
+    z-index: auto;
+}
+
+.alt_btn{
+    color: black;
+    width: 50px;
+    background-color: yellow;
+    border: none;
+    border-radius: 13px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+/* 햄버거 */
+.sidebar{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.sidebar.active{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: block;
+    background-color: white;
+    padding: 5px;
+    color: white;
+    text-align: left;
+}
+
+
+.sidebar > ul {
+    padding: 0px;
+}
+
+.sidebar ul li {
+    display: flex;
+    position: relative;
+    width: 90%;
+    list-style: none;
+    color: black;
+    margin: 5% 10px;
+}
+
+
+.sidebar img {
+    margin: 25px auto;
+    align-items: center;
+    max-width: 40%;
+    height: auto; /* 높이는 자동으로 조정됩니다. */
+}
+.sidebar ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-size: medium;
+    color: black;
+}
+a.main {
+    color: black;
+}
+a.main:visited {
+    color: black;
+}
+a.sub {
+    color: #888888;
+    font-weight: 300;
+    padding-left: 10px;
+}
+a.sub:visited {
+    color: #888888;
+    font-weight: 300;
+    padding-left: 10px;
+}
+.sidebar li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+hr {
+    border: 1px solid var(--color-login-back);
+    width: 90%;
+    margin: 15px auto ;
+}

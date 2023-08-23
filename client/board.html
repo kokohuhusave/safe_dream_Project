@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Basic Page Info -->
+		<meta charset="utf-8" />
+		<title>지켜Dream 관리자</title>
+
+		<!-- Site favicon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="vendors/images/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="vendors/images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="vendors/images/favicon-16x16.png"
+		/>
+
+		<!-- Mobile Specific Metas -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="vendors/styles/icon-font.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="src/plugins/datatables/css/dataTables.bootstrap4.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="src/plugins/datatables/css/responsive.bootstrap4.min.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"
+		></script>
+		<script
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-GBZ3SGGX85");
+		</script>
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+		</script>
+		<!-- End Google Tag Manager -->
+	</head>
+	<body class="header-white sidebar-light">
+		<div class="header">
+			<div class="header-right">
+				<div class="dashboard-setting user-notification">
+						<a class="dropdown-toggle logout-a"
+						href="./login.html"
+						data-toggle="right-sidebar"
+						onclick="clearToken()"
+						>로그아웃 <i class="dw dw-logout1"></i>
+						</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="left-side-bar open">
+			<div class="brand-logo">
+				<a href="index.html">Admin Page</a>
+
+			</div>
+			<div class="menu-block customscroll">
+				<div class="sidebar-menu">
+					<ul id="accordion-menu">
+						<li class="dropdown">
+							<a href="./index.html" class="dropdown-toggle" id="dropdown-toggle-home">
+								<span class="micon bi bi-house"></span
+								><span class="mtext">Home</span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a href="./datatable1.html" class="dropdown-toggle dropdown-toggle-board">
+								<span class="micon bi bi-textarea-resize"></span
+								><span class="mtext">회원관리</span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a href="./board.html" class="dropdown-toggle dropdown-toggle-board">
+								<span class="micon bi bi-table"></span
+								><span class="mtext">게시판 관리</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="main-container">
+			<div class="pd-ltr-20 xs-pd-20-10">
+				<div class="min-height-200px">
+					<div class="page-header">
+						<div class="row">
+							<div class="col-md-6 col-sm-12">
+								<div class="title">
+									<h4>게시판 관리</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Checkbox select Datatable start -->
+					<div class="page-header">
+						<div class="row">
+							<h4 class="col-md-6 col-sm-12" id="list-title">게시글 목록<div>
+								<select class="category-combo" id="categorySelect">
+									<option value="전체" selected>전체</option>
+									<option value="위험지역 공유">위험지역 공유</option>
+									<option value="자유게시판">자유게시판</option>
+									<option value="공지">공지</option>
+								</select>
+							</div></h4>
+							<div class="col-md-6 col-sm-12 text-right" id="btn-delete">
+								<a
+										class="btn btn-primary dropdown-toggle"
+										href="html5-editor.html"
+										role="button"
+										id="btn-create-a"
+									>
+										글쓰기
+									</a>
+								<button
+										class="btn btn-primary dropdown-toggle"
+										type="sumbit"
+										role="button"
+										id="btn-delete-a"
+									>
+										삭제
+									</button>
+							</div>
+						</div>
+						<div class="pb-20">
+							<table class="checkbox-datatable table nowrap">
+								<colgroup>
+									<col style="width: 5%;">
+									<col style="width: 15%;">
+									<col style="width: 15%;">
+									<col style="width: 50%;">
+									<col style="width: 15%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>
+											<div class="dt-checkbox">
+												<input
+													type="checkbox"
+													name="select_all"
+													value="1"
+													id="example-select-all"
+												/>
+												<span class="dt-checkbox-label"></span>
+											</div>
+										</th>
+										<th>카테고리</th>
+										<th>작성자 ID</th>
+										<th>글 제목</th>
+										<th>작성 일자</th>
+									</tr>
+								</thead>
+								<tbody id="boardList">
+									 <!-- <tr>
+										<td></td>
+										<td>지킴이집 사용후기</td>
+										<td>apple</td>
+										<td>GS25 지킴이집 후기 공유합니다.</td>
+										<td>2023-05-06</td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-wrap pd-20 mb-20 card-box">
+			2023 Lucy - All rights reserved
+		</div>
+		
+		<!-- js -->
+		<script src="vendors/scripts/core.js"></script>
+		<script src="vendors/scripts/script.min.js"></script>
+		<script src="vendors/scripts/process.js"></script>
+		<script src="vendors/scripts/layout-settings.js"></script>
+		<script src="src/plugins/apexcharts/apexcharts.min.js"></script>
+		<script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+		<script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+		<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+		<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+		<script src="vendors/scripts/dashboard3.js"></script>
+		<!-- buttons for Export datatable -->
+		<script src="src/plugins/datatables/js/dataTables.buttons.min.js"></script>
+		<script src="src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
+		<script src="src/plugins/datatables/js/buttons.print.min.js"></script>
+		<script src="src/plugins/datatables/js/buttons.html5.min.js"></script>
+		<script src="src/plugins/datatables/js/buttons.flash.min.js"></script>
+		<script src="src/plugins/datatables/js/pdfmake.min.js"></script>
+		<script src="src/plugins/datatables/js/vfs_fonts.js"></script>
+		<!-- Datatable Setting js -->
+		<script src="vendors/scripts/datatable-setting.js"></script>
+		<!-- Google Tag Manager (noscript) -->
+		<!-- 우리 js -->
+		<script src="./boardlist.js"></script>
+		<script src="./style.css"></script>
+
+
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	</body>
+</html>

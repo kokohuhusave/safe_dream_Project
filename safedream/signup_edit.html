@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="backimg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/IDPWsearch_edit.css">
+    <title>지켜Dream</title>
+    <script src="./signup.js"></script>
+</head>
+<body>
+    <div id="imgbox_signup">
+        <img src="./images/logo.png" alt="" >
+    </div>
+    <div class="content">
+        <div class="nav">
+            <h3 id="signup_title" style="color: black;">[회원가입]</h3>
+            <p class="text">이름</p>
+            <input type="text" id="username" class="input" maxlength="20" placeholder="이름을 입력하세요.">
+            <p class="text">아이디</p>
+            <input type="text" id="userid" class="input" maxlength="20" placeholder="아이디를 입력하세요.">
+            <div type="button" id="btn_check" class="btn" onclick="checkUserID()">중복확인</div>
+            <p class="text" style="clear: both;">비밀번호</p>
+            <input type="password" id="userpw" class="input" maxlength="20" placeholder="비밀번호를 입력하세요." style="font-family:none !important">
+            <p class="text">비밀번호 확인</p>
+            <input type="password" id="userpw_a" class="input" maxlength="20" placeholder="비밀번호를 입력하세요." style="font-family:none !important">
+            <p class="text">휴대폰 번호(본인)</p>
+            <input type="text" id="hp" class="input" maxlength="20" placeholder="번호를 입력하세요.">
+            <p class="text">보호자 연락처1[필수]</p>
+            <input type="text" id="guardianHp" class="input" maxlength="20" placeholder="보호자 연락처를 입력하세요.">
+            <!-- <p class="text">보호자 연락처2[선택]</p>
+            <input type="text" id="protector2" class="input" maxlength="20" placeholder="보호자 연락처2를 입력하세요."> -->
+            <div type="button" class="btn" id="btn_submit" onclick="registerUser()" >submit</div>
+        </div>
+    </div>
+</body>
+</html>

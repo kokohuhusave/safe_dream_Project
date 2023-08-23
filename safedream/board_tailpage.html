@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/860826cfd0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/board_tailpage.css">
+        <script src="./update.js"></script>
+        <title>지켜Dream</title>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img id="logo_img" src="./images/logo.png" alt="logo">
+            </div>
+            <div id="hamburger" onclick="toggleMenu()">
+            </div>
+            <div id="home" onclick="location.href='./Main_1.html'">
+            </div>
+        </header>
+
+        <section>
+            <div class="sidebar">
+                <ul>
+                    <li id="userimg"><img src="./images/사람모양_배너.png" alt="" width="100" height="100"></li>
+                    <li><a href="./update_user_edit.html">개인정보수정</a></li>
+                    <hr>
+                    <li><a href="#">사용자 및 운영자 교육</a></li>
+                    <li class="small_letter"><a href="./edu.html" class="sub">아동안전지킴이</a></li>
+                    <li class="small_letter"><a href="./edu2.html" class="sub">여성안전지킴이</a></li>
+                    <hr>
+                    <li><a href="./board_user.html">게시판</a></li>
+                    <hr>
+                    <li><a href="#">관련사이트</a></li>
+                    <li class="small_letter"><a href="./patrol.html" class="sub">순찰지역 등록</a></li>
+                    <li class="small_letter"><a href="./safety.html" class="sub">안전 귀가 신청</a></li>
+                    <hr>
+                    <li><a href="./index.html" onclick="clearToken()">로그아웃</a></li>
+                </ul>
+            </div>  
+            <div id="board"><p>게시글 상세보기</p></div>
+            <div id="back">
+                <h4 class="board-category" id="board-category">카테고리</h4>
+                <h4 class="board-title" id="board-title">제목</h4>
+                <h4 class="board-category-bottom" id="upload-name">아이디 
+                </h4>
+                <h4 class="board-category-bottom" id="upload-date" style="color:gray;">날짜
+                </h4>
+                <hr>
+            <div class="board-content-box" id="board-content">
+                로딩중입니다.
+            </div>
+            </div>
+
+            <div id="btn-cancle" onclick="goBack()"> < 이전 페이지 </div>
+
+        </section>
+
+    <script src="board_tailpage.js"></script>
+    </body>
+</html>
+

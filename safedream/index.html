@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="backimg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login_edit.css">
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js" integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+    <script src="./login.js"></script>
+    <title>지켜Dream</title>
+</head>
+
+<body>
+    <div id="imgbox">
+        <img id="logo" src="./images/logo.png" alt="">
+    </div>
+    <div class="content">
+        <div class="nav">
+            <div id="login_input">
+                <p class="text">아이디</p>
+                <input type="text" id="userid" class="input" maxlength="20" placeholder="아이디를 입력하세요."><br>
+                <p class="text">비밀번호</p>
+                <input type="password" id="userpw" class="input" maxlength="20" placeholder="비밀번호를 입력하세요." style="font-family:none !important">
+                <!-- <p id="auto_login"><input type="checkbox" name="Auto-Login" value="자동로그인" id="auto_check">자동로그인</p> -->
+                <div class="center"> <button class="btn" onclick="location.href='./agree_service.html'">회원가입</button>
+                <button class="btn" onclick="loginSrv()">로그인</button></div>
+                <hr>
+                <div type="button" class="btn_search" onclick="location.href='./IDPWsearch_edit.html'">아이디/비밀번호 찾기</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

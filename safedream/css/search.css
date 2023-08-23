@@ -1,0 +1,603 @@
+:root {
+    --color-background: #18224E;
+    --color-nav-selected: rgb(70, 84, 128);
+    --color-board-back: #F4F4F4;
+    --color-login-back: #9999aec7;
+    --color-btn-darknavy:#434874;
+    --color-btn-navy:#505694;
+    --color-btn-lightnavy: #656BA2;
+    --color-btn-blue: #5A6CA8;
+    --color-btn-noact: #9999AE;
+    --color-btn-act: #656FC8;
+    --color-btn-yello: #FFCC4D;
+    --color-btn-red: #FF3131;
+    --font-subtitle: 18px;
+    --size-border-radius: 13px;
+}
+
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+ * {font-family: 'twayair';}
+
+html {
+    padding: 0;
+    height: 100%;
+    background-color: #18224E;
+}
+body {
+    height: 100%;
+    color: white;
+    text-align: center;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    font-family: 'twayair';
+    font-weight: bolder;
+}
+
+header {
+    height: 10%;
+    box-sizing: border-box;
+    padding-top: 28px;
+}
+
+#logo {
+    width: 40%;
+    height: 60%;
+    float: left;
+    box-sizing: border-box;
+    margin: 5px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo_img {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    width: 120%;
+    max-width: 300px;
+    display: block;
+}
+
+#hamburger {
+    width: 14%;
+    height: 85%;
+    float: right;
+    margin-right: 0;
+    box-sizing: border-box;
+    margin: 0px;
+    background-image: url(../images/hamberger.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#home {
+    width: 14%;
+    height: 85%;
+    float: right;
+    margin-right: 15px;
+    box-sizing: border-box;
+    margin: 0px;
+    background-image: url(../images/home.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/* section 부분 */
+section {
+    position: relative;
+    padding-top: 10px;
+
+    height: 90%;
+    box-sizing: border-box;
+    flex-direction: column;
+    overflow: hidden;
+    display: flex;
+}
+
+#board{
+    height: 33px;
+    line-height: 33px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid white;
+    font-size: large;
+    display: flex;
+}
+.selectmenu1 {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.selectmenu2 {
+    color: #B8B8B8;
+    width: 50%;
+}
+
+.selected {
+    color: white;
+}
+
+input {
+    box-sizing: border-box;
+    z-index: -2;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 95%;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #a3a1a1;
+    border-radius: 15px;
+}
+
+#search {
+    position: fixed;
+    margin-top: 7px;
+    width: 99%;
+
+}
+
+
+#content>img {
+    margin-top: 7px
+}
+#content {
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    padding: 5px;
+    z-index: 5;
+    color:black;
+    float: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#content>p {
+    margin: 5px 0;
+    height: 50px;
+    line-height: 50px;
+    color: #CF1717;
+    font-weight: bold;
+}
+
+#content>h1 {
+    margin: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: bolder;
+    display: inline;
+}
+
+#content>h2 {
+    margin: 5px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    display: inline;
+}
+
+h2.tag {
+    color: #888888;
+}
+
+
+/* 햄버거 */
+.sidebar{
+    display: none;
+    position: absolute;
+    z-index: 200;
+    box-shadow: 5px 5px 5px 5px #63636377;
+}
+.sidebar.active{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: block;
+    background-color: white;
+    padding: 5px;
+    color: white;
+    text-align: left;
+}
+
+
+.sidebar > ul {
+    padding: 0px;
+}
+
+.sidebar ul li {
+    display: flex;
+    position: relative;
+    width: 90%;
+    list-style: none;
+    color: black;
+    margin: 5% 10px;
+}
+
+
+.sidebar img {
+    margin: 25px auto;
+    align-items: center;
+    max-width: 40%;
+    height: auto; /* 높이는 자동으로 조정됩니다. */
+}
+.sidebar ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-size: medium;
+    color: black;
+}
+a.main {
+    color: black;
+}
+a.main:visited {
+    color: black;
+}
+a.sub {
+    color: #888888;
+    font-weight: 300;
+    padding-left: 10px;
+}
+a.sub:visited {
+    color: #888888;
+    font-weight: 300;
+    padding-left: 10px;
+}
+.sidebar li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+hr {
+    border: 1px solid var(--color-login-back);
+    width: 90%;
+    margin: 15px auto ;
+}
+.map_wrap {
+    width: 100%;
+    height: 100%;
+    /* display: block; */
+}
+.map_wrap * {
+    margin: 0;
+    padding: 0;
+    fontmenu_wrap-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+    font-size: 12px;
+
+}
+
+.map_wrap a,
+.map_wrap a:hover,
+.map_wrap a:active {
+    color: #000;
+    text-decoration: none;
+}
+
+.map_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#menu_wrap {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 90%;
+    height: 50%;
+    padding: 5px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.bg_white {
+    background: #fff;
+}
+
+
+#menu_wrap hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #5F5F5F;
+    margin: auto;
+}
+
+#menu_wrap .option {
+    text-align: center;
+    width: 100%;
+}
+
+#menu_wrap .option p {
+    margin: 10px 0;
+}
+
+#menu_wrap .option button {
+    margin-left: 5px;
+}
+
+#placesList li {
+    list-style: none;
+    color: rgba(0, 0, 0, 0.76);
+
+}
+
+#placesList .item {
+    position: relative;
+    border-bottom: 1px solid #888;
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 65px;
+}
+
+#placesList .item span {
+    display: block;
+    margin-top: 4px;
+}
+
+#placesList .item h5,
+#placesList .item .info {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#placesList .item .info {
+    padding: 10px 0 10px 55px;
+}
+
+#placesList .info .gray {
+    color: #8a8a8a;
+}
+
+#placesList .info .jibun {
+    padding-left: 26px;
+    background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;
+}
+
+#placesList .info .tel {
+    color: #009900;
+}
+
+#placesList .item .markerbg {
+    float: left;
+    position: absolute;
+    width: 36px;
+    height: 37px;
+    margin: 10px 0 0 10px;
+    background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;
+}
+
+#placesList .item .marker_1 {
+    background-position: 0 -10px;
+}
+
+#placesList .item .marker_2 {
+    background-position: 0 -56px;
+}
+
+#placesList .item .marker_3 {
+    background-position: 0 -102px
+}
+
+#placesList .item .marker_4 {
+    background-position: 0 -148px;
+}
+
+#placesList .item .marker_5 {
+    background-position: 0 -194px;
+}
+
+#placesList .item .marker_6 {
+    background-position: 0 -240px;
+}
+
+#placesList .item .marker_7 {
+    background-position: 0 -286px;
+}
+
+#placesList .item .marker_8 {
+    background-position: 0 -332px;
+}
+
+#placesList .item .marker_9 {
+    background-position: 0 -378px;
+}
+
+#placesList .item .marker_10 {
+    background-position: 0 -423px;
+}
+
+#placesList .item .marker_11 {
+    background-position: 0 -470px;
+}
+
+#placesList .item .marker_12 {
+    background-position: 0 -516px;
+}
+
+#placesList .item .marker_13 {
+    background-position: 0 -562px;
+}
+
+#placesList .item .marker_14 {
+    background-position: 0 -608px;
+}
+
+#placesList .item .marker_15 {
+    background-position: 0 -654px;
+}
+
+#pagination {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#pagination a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#pagination .on {
+    font-weight: bold;
+    cursor: default;
+    color: #777;
+}
+
+.wrap {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    width: 288px;
+    height: 132px;
+    margin-left: -144px;
+    text-align: left;
+    overflow: hidden;
+    font-size: 12px;
+    font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+    line-height: 1.5;
+}
+#searchInput{
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    z-index: 10;
+}
+#keyword {
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 0 10px;
+    background-color: white;
+    border: 1px solid #a3a1a1;
+    border-radius: 15px;
+    height: 35px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+}
+#searchBtn {
+    position : absolute;
+    width: 20%;
+    height: 25px;
+    top: 5px;
+    right: 15px;
+    margin: 5px auto;
+    border-radius: 14px;
+    border: none;
+    background-color: rgb(206, 206, 206);
+    font-size: 13px;
+}
+
+.wrap * {
+    padding: 0;
+    margin: 0;
+}
+
+.wrap .info {
+    width: 286px;
+    height: 120px;
+    border-radius: 5px;
+    border-bottom: 2px solid #ccc;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+    background: #fff;
+}
+
+.wrap .info:nth-child(1) {
+    border: 0;
+    box-shadow: 0px 1px 2px #888;
+}
+
+.info .title {
+    padding: 5px 0 0 10px;
+    height: 30px;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #888;
+    width: 17px;
+    height: 17px;
+    background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');
+}
+
+.info .close:hover {
+    cursor: pointer;
+}
+
+.info .body {
+    position: relative;
+    overflow: hidden;
+}
+
+.info .desc {
+    position: relative;
+    margin: 13px 0 0 90px;
+    height: 75px;
+}
+
+.desc .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.desc .jibun {
+    font-size: 11px;
+    color: #888;
+    margin-top: -2px;
+}
+
+.info .img {
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 73px;
+    height: 71px;
+    border: 1px solid #ddd;
+    color: #888;
+    overflow: hidden;
+}
+
+.info:after {
+    content: '';
+    position: absolute;
+    margin-left: -12px;
+    left: 50%;
+    bottom: 0;
+    width: 22px;
+    height: 12px;
+    background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
+}
+
+.info .link {
+    color: #5085BB;
+}

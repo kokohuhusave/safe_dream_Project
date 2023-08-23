@@ -1,0 +1,307 @@
+body {
+    background-color: #18224E;
+    color: white;
+    text-align: center;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+div {
+    overflow: auto;
+}
+div[id="hamburger"]{
+    display: block;
+}
+div[id="hamburger"] + label {
+    display: block;
+    width: 60px;
+    height: 40px;
+    cursor:pointer;
+}
+
+div[id="hamburger"]+ label > span{
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: black;
+}
+
+.speaker {
+    position: fixed;
+    z-index: -1;
+    display: none; 
+}
+
+.display {
+    display: flex;
+}
+
+.singo_btn{
+    background-color: gray;
+    border-radius: 13px;
+    width: 75%;
+    margin: 10% auto;
+    padding: 10% 0;
+}
+.singo_btn.active{
+    background-color: blue;
+    border-radius: 13px;
+    width: 75%;
+    margin: 10% auto;
+    padding: 10% 0;
+}
+
+#siren > img{
+    position: relative;
+    margin: 100px auto 10px;
+    width: 50%;
+}
+
+#siren > p {
+    margin-top: 0;
+    color: #FFDE59
+}
+
+#singo{
+    background-color: red;
+    border-radius: 13px;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 20% 0;
+}
+
+#jikim{
+    background-color: #FFDE59;
+    border-radius: 13px;
+    width: 75%;
+    padding: 5% 0;
+    margin: 0 auto;
+    color:black;
+}
+
+.singo_btn{
+    background-color: gray;
+    border-radius: 13px;
+    width: 75%;
+    margin: 10% auto;
+    padding: 10% 0;
+}
+
+#start_btn{
+    background-color: yellow;
+    border-radius: 13px;
+    width: 75%;
+    height: 35px;
+    margin: 10% auto;
+    padding: 2% 0;
+}
+
+#siren_btn{
+    background-color: black;
+    border-radius: 13px;
+    border: 3px solid white;
+    width: 75%;
+    height: 35px;
+    margin: 10% auto;
+    padding: 2% 0;
+}
+
+
+
+
+
+/******************************************************************************/
+#header {
+    height: 70px;
+    overflow: auto;
+}
+
+#header > div {
+    height: 90%;
+    box-sizing: border-box;
+}
+
+#logo {
+    width:30%;
+    height: 100%;
+    float: left;
+    margin: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: 80%;
+    overflow:auto;
+    box-sizing: border-box;
+}
+
+#hamburger {
+    width:15%;
+    height: 100%;
+    float: right;
+    margin: 5px;
+}
+
+#home {
+    width: 15%;
+    height: 100%;
+    float: right;
+    margin: 5px;
+}
+
+
+.selected {
+    color: white;
+}
+
+
+#search {
+    position: relative;
+    margin-top: 40px;
+}
+
+#search img {
+    position : absolute;
+    width: 20px;
+    top: 5px;
+    right: 15px;
+    margin: 0;
+}
+
+#map {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    background-size: cover;
+    z-index: -1;
+}
+
+#content {
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+    text-align: left;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    padding: 5px;
+    z-index: 1;
+    color:black;
+    float: left;
+}
+
+#content>p {
+    margin: 5px 0;
+    height: 50px;
+    line-height: 50px;
+    color: #CF1717;
+    font-weight: bold;
+}
+
+#content>h1 {
+    margin: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 28px;
+    font-weight: bolder;
+    display: inline;
+}
+
+#content>h2 {
+    margin: 5px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: bolder;
+    display: inline;
+}
+
+h2.tag {
+    color: #888888;
+}
+
+
+p#searchbtn>img {
+    position: static;
+    float: right;
+    height: 50%;
+    z-index: -5;
+}
+
+/*사이드바 css*/
+.sidebar{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.sidebar.active{
+    width: 50%;
+    height: 100%;
+    right: 0;
+    display: block;
+    background-color: white;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+    /*overflow: hidden;*/   /*내용이 창을 벗어나는 경우 숨겨짐*/
+}
+
+/*
+.sidebar ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style: none;
+}
+*/
+
+.sidebar ul li {
+    display: flex;
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.sidebar img {
+    margin: auto;
+    align-items: center;
+    margin-bottom: 10px;
+    max-width: 80%;
+    height: auto; /* 높이는 자동으로 조정됩니다. */
+}
+
+.sidebar ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.sidebar li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+hr {
+    border: 2px solid black;
+    width: 80%;
+}
+
+.small_letter {
+    font-size: 15px; /* 적용된 글씨의 크기 */
+    font-weight: normal; /* 적용된 글씨의 굵기 */
+    color: gray; /* 적용된 글씨의 색상 */
+    margin-left: 10px; /* 적용된 글씨에 한칸 들여쓰기 */
+}

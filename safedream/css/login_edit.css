@@ -1,0 +1,221 @@
+:root {
+    --color-background: #18224E;
+    --color-nav-selected: rgb(70, 84, 128);
+    --color-board-back: #F4F4F4;
+    --color-login-back: #9999aec7;
+    --color-btn-darknavy:#434874;
+    --color-btn-navy:#505694;
+    --color-btn-lightnavy: #656BA2;
+    --color-btn-blue: #5A6CA8;
+    --color-btn-noact: #9999AE;
+    --color-btn-act: #656FC8;
+    --color-btn-yello: #FFCC4D;
+    --color-btn-red: #FF3131;
+    --font-subtitle: 18px;
+    --size-border-radius: 13px;
+}
+
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+ * {font-family: 'twayair';}
+
+ /****** 로그인 ******/
+
+html.backimg{
+    background-image: url(../images/loginback.png);
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+p {color:#000}
+p.text {
+    margin: 5px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+/* 회원가입에서 중복버튼 css*/
+#btn_check{
+    display: block;
+    float: right;
+    margin-top: 5px;
+}
+
+/************/
+/* 상단 로고 */
+#imgbox{
+    flex-grow: 0.3;
+    width: 80%;
+    height: 30%;
+    float: left;
+    box-sizing: border-box;
+    margin: 10px auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#logo {
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 120%;
+    max-width: 300px;
+}
+
+/****** update.css ******/
+/*p태그중 내용들은 검정색 (update에 쓰임)*/
+p.up_text{
+    text-align: left;
+    color: black;
+    font: 18px bold;
+}
+
+/*인풋 박스 동그라미*/
+.input {
+    padding-left: 10px;
+    width: 94%;
+    height: 30px;
+    border: none;
+    border-radius: 13px;
+}
+
+#userpw{
+    color: #000;
+}
+
+
+.content {
+    /* overflow: ; */
+    height: 50%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+div.nav{
+    /*border: 3px solid white;*/
+    width: 80%;
+    background-color: var(--color-login-back);
+    padding: 5% 20px;
+    border-radius: 13px;
+    z-index: 1;
+    height: 85%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    overflow: hidden;
+}
+#login_input{
+    /* height: 85%; */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+#auto_login{
+    height: 20px;
+    line-height: 20px;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+#auto_check{
+    width: 18px;
+    height: 18px;
+    margin: 0 5px;
+
+}
+/* 회원가입/로그인 버튼 */
+.center {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+div.btn_update{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn{
+    color: white;
+    background-color: var(--color-btn-darknavy);
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    width: 45%;
+    height: 30px;
+}
+
+.btn_search {
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 13px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+hr {
+    border-color: #00000073;
+    color: #000;
+    width: 95%;
+}
+#easy_lgin {
+    margin: 5px auto;
+    margin-bottom: 10px;
+}
+#login_icon {
+    /*카카오 버튼이랑 네이버 버튼 한줄에 하나씩만 보이게 할라고 주석 */
+    display: flex; 
+    justify-content:space-around;
+    padding: 0 20px;
+}
+
+#del_btn{    
+    color: white;
+    float: right;
+    border: none;
+}
+
+#home {
+    width: 15%;
+    height: 80%;
+    float: right;
+    margin: 5px;
+}
+
+#title {
+    background-color: #434874;
+    height: 50px;
+}

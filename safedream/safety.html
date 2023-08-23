@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/edu.css">
+    <script src="./update.js"></script>
+    <title>지켜Dream</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img id="logo_img" src="./images/logo.png" alt="logo">
+        </div>
+        <div id="hamburger" onclick="toggleMenu()">
+        </div>
+        <div id="home" onclick="location.href='./Main_1.html'">
+        </div>
+    </header>
+    
+    <section>
+        <div class="sidebar">
+            <ul>
+                <li id="userimg"><img src="./images/사람모양_배너.png" alt="" width="100" height="100"></li>
+                <li><a href="./update_user_edit.html">개인정보수정</a></li>
+                <hr>
+                <li><a href="#">사용자 및 운영자 교육</a></li>
+                <li class="small_letter"><a href="./edu.html" class="sub">아동안전지킴이</a></li>
+                <li class="small_letter"><a href="./edu2.html" class="sub">여성안전지킴이</a></li>
+                <hr>
+                <li><a href="./board_user.html">게시판</a></li>
+                <hr>
+                <li><a href="#">관련사이트</a></li>
+                <li class="small_letter"><a href="./patrol.html" class="sub">순찰지역 등록</a></li>
+                <li class="small_letter"><a href="./safety.html" class="sub">안전 귀가 신청</a></li>
+                <hr>
+                <li><a href="./index.html" onclick="clearToken()">로그아웃</a></li>
+            </ul>
+        </div>  
+        <div id="board"><p>여성 안전 귀가 신청</p></div>
+
+        <div style="overflow: scroll;">
+        <table class="type10">
+            <thead>
+            <tr>
+                <th scope="cols">타이틀</th>
+                <th scope="cols">안심 귀가 서비스</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">개요</th>
+                <td>
+                    서울시의 안심귀가 스카우트는 여성과 학생이 늦은 밤 혼자 집에 가기 무서울 때 신청해 이용하는 서비스다. <br>
+                    안심귀가 스카우트는 서울시에서 선발한 스카우트 대원 2명이 신청자의 집까지 동행해주며 안심하고 안전하게 귀가하도록 도와준다.<br>
+                    서비스는 전화나 앱을 통해 신청할 수 있으며, 이용시간 30분 전까지 예약을 하면 된다. 늦은 밤 시간인 10시부터 새벽 1시까지 이용할 수 있어서 안전하다.<br>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="even">전화 신청</th>
+                <td class="even">
+                    전화신청은 지하철역이나 버스정류장 도착 30분전에 120다산콜센터 또는 해당지역의 구청 상황실로 전화하면 된다. <br>
+                    대부분 거점지역에서 만나게 되는데 약속된 장소에 도착 후 스카우트의 신분증을 확인하고 함께 집 앞까지 동행한다.<br>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+
+            
+            <table class="type11">
+            <thead>
+            <tr>
+                <th scope="cols">연번</th>
+                <th scope="cols">기관명</th>
+                <th scope="cols">상활실 전화 번호</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</th>
+                <td>종로구</th>
+                <td>02-2148-1111</th>
+            </tr>
+            <tr>
+                <td>2</th>
+                <td>중구</th>
+                <td>02-3396-4000,4001</th>
+            </tr>
+            <tr>
+                <td>3</th>
+                <td>용산구</th>
+                <td>02-2199-6300</th>
+            </tr>
+            <tr>
+                <td>4</th>
+                <td>성동구</th>
+                <td>02-2286-6262</th>
+            </tr>
+            <tr>
+                <td>5</th>
+                <td>광진구</th>
+                <td>02-450-1330</th>
+            </tr>
+            <tr>
+                <td>6</th>
+                <td>동대문구</th>
+                <td>02-2127-4626</th>
+            </tr>
+            <tr>
+                <td>7</th>
+                <td>중랑구</th>
+                <td>02-2094-1148</th>
+            </tr>
+            <tr>
+                <td>8</th>
+                <td>성북구</th>
+                <td>02-2241-1900</th>
+            </tr>
+            <tr>
+                <td>9</th>
+                <td>강북구</th>
+                <td>02-901-6112</th>
+            </tr>
+            <tr>
+                <td>10</th>
+                <td>도봉구</th>
+                <td>02-2091-3109</th>
+            </tr>
+            <tr>
+                <td>11</th>
+                <td>노원구</th>
+                <td>02-2116-3742</th>
+            </tr>
+            <tr>
+                <td>12</th>
+                <td>은평구</th>
+                <td>02-351-8000</th>
+            </tr>
+            <tr>
+                <td>13</th>
+                <td>서대문구</th>
+                <td>02-330-1119</th>
+            </tr>
+            <tr>
+                <td>14</th>
+                <td>마포구</th>
+                <td>02-3153-8104</th>
+            </tr>
+            <tr>
+                <td>15</th>
+                <td>양천구</th>
+                <td>02-2620-3399</th>
+            </tr>
+            <tr>
+                <td>16</th>
+                <td>강서구</th>
+                <td>02-2600-1281~2</th>
+            </tr>
+            <tr>
+                <td>17</th>
+                <td>구로구</th>
+                <td>02-860-2525</th>
+            </tr>
+            <tr>
+                <td>18</th>
+                <td>금천구</th>
+                <td>02-2627-2414</th>
+            </tr>
+            <tr>
+                <td>19</th>
+                <td>영등포구</th>
+                <td>02-831-9736</th>
+            </tr>
+            <tr>
+                <td>20</th>
+                <td>동작구</th>
+                <td>02-820-1040~1</th>
+            </tr>
+            <tr>
+                <td>21</th>
+                <td>관악구</th>
+                <td>02-879-7640</th>
+            </tr>
+            <tr>
+                <td>22</th>
+                <td>서초구</th>
+                <td>02-2155-8510</th>
+            </tr>
+            <tr>
+                <td>23</th>
+                <td>강남구</th>
+                <td>02-3423-6000~3</th>
+            </tr>
+            <tr>
+                <td>24</th>
+                <td>송파구</th>
+                <td>02-2147-2799</th>
+            </tr>
+            <tr>
+                <td>25</th>
+                <td>강동구</th>
+                <td>02-3425-5009</th>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+    </section>
+    <div id="nav">
+        <div class="menu" onclick="location.href='./patrol.html'">순찰지역 등록</div>
+        <div class="menu selected" onclick="location.href='./safety.html'">안전귀가</div>
+    </div>
+</body>
+</html>

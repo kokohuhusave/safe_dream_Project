@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/search.css">
+    <script src="update.js"></script>
+    <title>지켜Dream</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img id="logo_img" src="./images/logo.png" alt="logo">
+        </div>
+        <div id="hamburger" onclick="toggleMenu()">
+        </div>
+        <div id="home" onclick="location.href='./Main_1.html'">
+        </div>
+    </header>
+    <section>
+        <div class="sidebar">
+            <ul>
+                <li id="userimg"><img src="./images/사람모양_배너.png" alt="" width="100" height="100"></li>
+                <li><a href="./update_user_edit.html">개인정보수정</a></li>
+                <hr>
+                <li><a href="#">사용자 및 운영자 교육</a></li>
+                <li class="small_letter"><a href="./edu.html" class="sub">아동안전지킴이</a></li>
+                <li class="small_letter"><a href="./edu2.html" class="sub">여성안전지킴이</a></li>
+                <hr>
+                <li><a href="./board_user.html">게시판</a></li>
+                <hr>
+                <li><a href="#">관련사이트</a></li>
+                <li class="small_letter"><a href="./patrol.html" class="sub">순찰지역 등록</a></li>
+                <li class="small_letter"><a href="./safety.html" class="sub">안전 귀가 신청</a></li>
+                <hr>
+                <li><a href="./index.html" onclick="clearToken()">로그아웃</a></li>
+            </ul>
+        </div>
+        <div id="board">
+            <div class="selectmenu2" onclick="location.href='./Main_2.html'">긴급신고 대기</div>
+            <div class="selectmenu2 selected" onclick="location.href='./search.html'">지킴이집 검색</div>
+        </div>
+
+        <!-- 지도 부분 -->
+        <div class="map_wrap">
+            <form id="searchInput" onsubmit="searchPlaces(); return false;">
+                <input type="text" value="강남역" id="keyword" size="15">
+                <button id="searchBtn" type="submit">검색</button>
+            </form>
+            <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+            <div id="menu_wrap" class="bg_white">
+                <div class="option">
+                    
+                </div>
+                <hr>
+                <ul id="placesList"></ul>
+                <div id="pagination"></div>
+            </div>
+        </div>
+        <div id="map-container"></div>
+        <!-- 박스 생성 부분 -->
+        <div id="content" style="display: none">
+            
+        </div>
+    </section>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=03a20b900368df3275e4f7e96f4f9653&libraries=services">
+    </script>
+    <script src="./search.js"></script>
+</body>
+</html>
