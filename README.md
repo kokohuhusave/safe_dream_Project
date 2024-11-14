@@ -6,3 +6,6 @@
    
 ### 수상
 - 2023 서울 열린데이터광장 공공데이터 활용 모바일 앱/웹 경진대회에서 우수상 수상(서울특별시장상)
+
+# App 대표 이미지
+![safeDream](https://github.com/user-attachments/assets/34f55392-e28c-4484-bc48-a10a584e9853)
